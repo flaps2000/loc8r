@@ -47,3 +47,9 @@ how to push repo to github from host at synched folder, same local repo as alrea
 or push to multiple remote repositories from guest vm.
 
 post Vagrantfile as a gist for each tutorial repository.
+
+ssh stuff:
+
+eval "$(ssh-agent -s)"
+
+ssh-add -K ~/.ssh/id_rsa
