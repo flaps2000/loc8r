@@ -7,10 +7,8 @@ node_modules
 *~
 .DS_Store
 credentials.js
-TODO.txt
 exampleAng.js
 exampleAng.html
-loc8r.bbprojectd
 
 # Environment variables
 .env

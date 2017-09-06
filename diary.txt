@@ -62,3 +62,98 @@ As of 4.1.1, routes not restful. /location/review/new. new should be view indica
 
 emulate mobile devices in chrome through javascript console?
 
+Mongodb Section:
+
+mongodb v3.2.0 installed in vagrant box used
+
+sudo npm install --save mongoose
+
+above installs 4.11.10, trying again to set to match book version
+
+sudo npm uninstall mongoose
+
+sudo npm install --save mongoose@3.8.20
+  npm WARN deprecated mongodb@1.4.12: Please upgrade to 2.2.19 or higher
+
+so revert back to latest, 4.11.10.
+
+sudo npm uninstall mongoose
+
+sudo npm install --save mongoose
+  for some reason installed v3.9.7, so forced latest with:
+  
+sudo npm install --save mongoose@latest
+
+after setting mongoose in code get the following deprecation warning:
+
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Mongoose connected to mongodb://localhost/Loc8r
+
+making suggested changes.
+
+changed from connect() to createConnection().
+  now no log? mongod running?
+  
+Check mongod is running
+  service mongod status or 
+  status mongod
+  
+  is running
+  
+package.json version field? increment rules? automate?
+
+Locations for testing:
+
+  Two Hearted Queen:
+
+    1201 W Roscoe Street, Chicago, IL, 60657
+    
+    (-87.65931890000002, 41.943331199999996)
+    
+    HOURS
+      
+      Monday – Thursday 6am–7pm
+      Friday 6am–5pm
+      Saturday 7am–7pm
+      Sunday 7am–7pm
+    
+    Facilities:
+    
+      Hot Drinks
+      Wifi
+  
+  Daily Grind
+  
+    4613 N Lincoln Ave, Chicago, IL 60625
+    
+    (-87.68609500000002, 41.96546499999999)
+    
+    HOURS
+      
+      Monday – Friday 6am–6pm
+      Saturday 7am–6pm
+      Sunday 7am–4pm
+    
+    Facilities:
+    
+      Hot Drinks
+      Wifi
+      Food
+  
+  Metropolis Coffee Company
+  
+    1039 West Granville Avenu, Chicago, IL 60660
+    
+    (-87.656998, 41.994493)
+    
+    HOURS
+      
+      Monday – Friday 6:30am–8pm
+      Saturday 7am–8pm
+      Sunday 7:30am–8pm
+    
+    Facilities:
+    
+      Hot Drinks
+      Wifi
+      Food
