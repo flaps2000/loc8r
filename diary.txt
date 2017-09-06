@@ -34,13 +34,17 @@ git add .
 
 git commit -m "....."
   
-heroku login
+heroku login - did not create ssh key pair?!? used password only.
 
 heroku create
 
 git push heroku master
 
-heroku ps:scale web=1
+heroku ps:scale web=1 - not necessary to run, however......
+
+heroku open - not working from vagrant vm
+
+heroku logs --tail
 
 how to push repo to github from host at synched folder, same local repo as already pushed to heroku repo?
 
@@ -52,4 +56,9 @@ ssh stuff:
 
 eval "$(ssh-agent -s)"
 
-ssh-add -K ~/.ssh/id_rsa
+ssh-add -K ~/.ssh/gitkraken_rsa - change to standard id_rsa?
+
+As of 4.1.1, routes not restful. /location/review/new. new should be view indicator not in url. new set by action post surely?
+
+emulate mobile devices in chrome through javascript console?
+
