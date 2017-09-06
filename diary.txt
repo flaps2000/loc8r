@@ -1,0 +1,49 @@
+guest terminal 1
+
+sudo npm install
+npm start
+
+guest terminal 2
+
+curl localhost:3000
+
+or in browser on host, 127.0.0.1:4567
+
+npm install -g nodemon
+
+nodemon
+
+http://getbootstrap.com/docs/3.3/getting-started/#download
+
+create loc8r/public/bootstrap
+
+cp css, fonts, js to above bootstrap folder
+
+get jquery-1.11.1.min.js from book git, chapter 3 branch
+
+get amelia theme from book github
+
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+  vagrant@trusty64-node:~$ heroku --version
+  heroku-cli/6.14.17-790e0c0 (linux-x64) node-v8.4.0
+  
+git init
+
+git add .
+
+git commit -m "....."
+  
+heroku login
+
+heroku create
+
+git push heroku master
+
+heroku ps:scale web=1
+
+how to push repo to github from host at synched folder, same local repo as already pushed to heroku repo?
+
+or push to multiple remote repositories from guest vm.
+
+post Vagrantfile as a gist for each tutorial repository.
