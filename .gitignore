@@ -1,0 +1,16 @@
+# ignore packages installed by npm
+node_modules
+
+# put any other files you don't want to check in here,
+# such as .DS_Store (OSX), *.bak, etc.
+
+*~
+.DS_Store
+credentials.js
+TODO.txt
+exampleAng.js
+exampleAng.html
+loc8r.bbprojectd
+
+# Environment variables
+.env
