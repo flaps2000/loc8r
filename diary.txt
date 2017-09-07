@@ -36,6 +36,14 @@ git commit -m "....."
   
 heroku login - did not create ssh key pair?!? used password only.
 
+can reset ssh key on heroku dashboard/settings??
+
+  heroku keys:add gitkraken_rsa.pub
+  
+  heroku keys (check upload)
+  
+  ssh -v git@heroku.com (test)
+
 heroku create
 
 git push heroku master
@@ -104,10 +112,25 @@ heroku addons:add mongolab
 heroku addons:open mongolab??? from vm??
 heroku config:get MONGODB_URI
 
+Book issue: MONGODB_URI not MONGOLAB_URI. Mongoose issue, or mLab?
+
 MONGODB_URI: mongodb://heroku_hh13p7mq:83s85868puu9n2viv3ler9s7ep@ds127994.mlab.com:27994/heroku_hh13p7mq
   
 mongo ds127994.mlab.com:41082/heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep
   
+  vagrant@trusty64-node:/vagrant/loc8r$ mongo ds127994.mlab.com:41082/heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep
+  MongoDB shell version: 3.2.0
+  connecting to: ds127994.mlab.com:41082/heroku_hh13p7mq
+  2017-09-07T01:35:56.600+0000 W NETWORK  [thread1] Failed to connect to 54.80.99.254:41082, reason: errno:111 Connection refused
+  2017-09-07T01:35:56.601+0000 E QUERY    [thread1] Error: couldn't connect to server ds127994.mlab.com:41082, connection attempt failed :
+  connect@src/mongo/shell/mongo.js:226:14
+  @(connect):1:6
+
+  exception: connect failed
+  
+  vagrant issue? db seems to be up and running on server, and loaded schema from git push restart
+
+
 package.json version field? increment rules? automate? SPDX?
 
 Locations for testing:
