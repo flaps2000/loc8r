@@ -4,6 +4,7 @@ db.locations.find().forEach( function(thisDoc) {
     }, {
       $push: {
         reviews: [{
+          id: ObjectId(),
           author: "Martyn Ex",
           ratings: 4,
           reviewText: "Great place....",

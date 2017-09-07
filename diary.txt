@@ -64,7 +64,7 @@ ssh stuff:
 
 eval "$(ssh-agent -s)"
 
-ssh-add -K ~/.ssh/gitkraken_rsa - change to standard id_rsa?
+ssh-add ~/.ssh/gitkraken_rsa - change to standard id_rsa?
 
 As of 4.1.1, routes not restful. /location/review/new. new should be view indicator not in url. new set by action post surely?
 
@@ -211,6 +211,8 @@ restore failed
   
 try these:
 
+mongodump -h localhost:27017 -d Loc8r -o ~/tmp/mongodump
+
 mongorestore -h ds127994.mlab.com:27994 -d heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep ~/tmp/mongodump/Loc8r/locations.bson
 
 mongoexport -h localhost:27017 -d Loc8r -c locations -o ~/tmp/export.json
@@ -219,3 +221,7 @@ mongoimport -h ds127994.mlab.com:41082 -d Loc8r -c locations --drop --file ~/tmp
 
 
 
+Make api end point list for testing in a file, api_end_points.txt
+
+Add controllerLocations.locationsList
+Add conditional between locationsList and locationsListByDistance

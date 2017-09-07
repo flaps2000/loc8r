@@ -1,4 +1,5 @@
-var mongoose = require( 'mongoose' );
+var mongoose = require('mongoose');
+var gracefulShutdown;
 
 var dbURI = 'mongodb://localhost/Loc8r';
 if (process.env.NODE_ENV === 'production') {
@@ -49,4 +50,5 @@ process.on('SIGTERM', function() {
     });
 });
 
+// BRING IN YOUR SCHEMAS & MODELS
 require('./locations');

@@ -56,7 +56,7 @@ db.locations.save({
   name: 'Metropolis Coffee Company',
   address: '1039 West Granville Avenu, Chicago, IL 60660',
   facilities: ['Hot Drinks', 'Food', 'Wifi'],
-  coords: [-87.65931890000002, 41.943331199999996],
+  coords: [-87.656998, 41.994493],
   openingTimes: [{
     "days": "Mon - Fri",
     "opening": "6:30 am",

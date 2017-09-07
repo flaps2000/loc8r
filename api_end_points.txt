@@ -1,0 +1,16 @@
+// locations
+
+GET     http://127.0.0.1:4567/api/locations                             #controllerLocations.locationsList
+GET     http://127.0.0.1:4567/api//locations                            controllerLocations.locationsListByDistance   ?lng=$1&lat=$2&maxDistance=$3
+POST    http://127.0.0.1:4567/api//locations                            controllerLocations.locationsCreate
+GET     http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a   controllerLocations.locationsReadOne
+PUT     http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a   controllerLocations.locationsUpdateOne
+DELETE  http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a   controllerLocations.locationsDeleteOne
+
+// reviews
+
+GET     http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a/reviews                           #controllerReviews.reviewsList
+POST    http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a/reviews                           controllerReviews.reviewsCreate
+GET     http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a/reviews/59b142bba943e23c5742e991  controllerReviews.reviewsReadOne
+PUT     http://127.0.0.1:4567/api//locations/59b142b52181038e11687d1a/reviews/59b142bba943e23c5742e991  controllerReviews.reviewsUpdateOne
+DELETE  http://127.0.0.1:4567/api//locations/:locationid/reviews/:reviewid                              controllerReviews.reviewsDeleteOne
