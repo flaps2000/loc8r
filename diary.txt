@@ -100,7 +100,15 @@ Check mongod is running
   
   is running
   
-package.json version field? increment rules? automate?
+heroku addons:add mongolab
+heroku addons:open mongolab??? from vm??
+heroku config:get MONGODB_URI
+
+MONGODB_URI: mongodb://heroku_hh13p7mq:83s85868puu9n2viv3ler9s7ep@ds127994.mlab.com:27994/heroku_hh13p7mq
+  
+mongo ds127994.mlab.com:41082/heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep
+  
+package.json version field? increment rules? automate? SPDX?
 
 Locations for testing:
 
