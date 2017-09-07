@@ -130,6 +130,9 @@ mongo ds127994.mlab.com:41082/heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9
   
   vagrant issue? db seems to be up and running on server, and loaded schema from git push restart
 
+testing local app against prod db:
+  
+  NODE_ENV=production MONGODB_URI=mongodb://heroku_hh13p7mq:83s85868puu9n2viv3ler9s7ep@ds127994.mlab.com:27994/heroku_hh13p7mq nodemon
 
 package.json version field? increment rules? automate? SPDX?
 
@@ -188,3 +191,31 @@ Locations for testing:
       Hot Drinks
       Wifi
       Food
+      
+addOpeningTimes.js inserted [[....]] around instead of [....]?!? Added opening times to addCafes.js saves instead.
+
+(mongorestore -h localhost:27017 --drop -d Loc8r ~/tmp/mongodump/Loc8r) not in specific order
+      
+//running update script to mongo shell
+mongo localhost:27017/Loc8r ./scripts/addCafes.js
+mongo localhost:27017/Loc8r ./scripts/addOpeningTimes.js - not used
+mongo localhost:27017/Loc8r ./scripts/addReviews.js
+
+migrate database to production:
+
+mongodump -h localhost:27017 -d Loc8r -o ~/tmp/mongodump
+mongorestore -h ds127994.mlab.com:41082 -d heroku_hh13p7mq --drop -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep ~/tmp/mongodump/Loc8r
+
+restore failed
+  2017-09-07T04:51:25.101+0000	Failed: error connecting to db server: no reachable servers
+  
+try these:
+
+mongorestore -h ds127994.mlab.com:27994 -d heroku_hh13p7mq -u heroku_hh13p7mq -p 83s85868puu9n2viv3ler9s7ep ~/tmp/mongodump/Loc8r/locations.bson
+
+mongoexport -h localhost:27017 -d Loc8r -c locations -o ~/tmp/export.json
+
+mongoimport -h ds127994.mlab.com:41082 -d Loc8r -c locations --drop --file ~/tmp/export.json
+
+
+
