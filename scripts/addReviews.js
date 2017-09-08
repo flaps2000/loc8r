@@ -3,13 +3,13 @@ db.locations.find().forEach( function(thisDoc) {
     db.locations.update( { "_id" : thisDoc._id 
     }, {
       $push: {
-        reviews: [{
+        reviews: {
           id: ObjectId(),
           author: "Martyn Ex",
           ratings: 4,
           reviewText: "Great place....",
           createdOn: Date.now()
-        }]
+        }
       }
     })
   }

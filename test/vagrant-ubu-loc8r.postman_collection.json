@@ -1,0 +1,69 @@
+{
+	"variables": [],
+	"info": {
+		"name": "vagrant-ubu-loc8r",
+		"_postman_id": "e1e1b221-599e-fb4b-b117-c40fcf08dc18",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:4567/api/locations",
+			"request": {
+				"url": "http://127.0.0.1:4567/api/locations",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:4567/api//locations?lng=-87.65931890000002&lat=41.943331199999996&maxDistance=20",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:4567/api//locations?lng=-87.69406370000002&lat=41.9666845&maxDistance=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"api",
+						"",
+						"locations"
+					],
+					"query": [
+						{
+							"key": "lng",
+							"value": "-87.69406370000002",
+							"equals": true,
+							"description": "longitude coordinate"
+						},
+						{
+							"key": "lat",
+							"value": "41.9666845",
+							"equals": true,
+							"description": "latitude coordinate"
+						},
+						{
+							"key": "maxDistance",
+							"value": "5",
+							"equals": true,
+							"description": "maximum distance"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

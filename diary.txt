@@ -225,3 +225,11 @@ Make api end point list for testing in a file, api_end_points.txt
 
 Add controllerLocations.locationsList
 Add conditional between locationsList and locationsListByDistance
+
+chp7:
+
+npm install --save request
+
+difference from book. distance returned from mmongod for cafe location is now in m, not km.
+
+ERROR: jquery validation in validation.js not being called.
