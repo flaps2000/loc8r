@@ -233,3 +233,8 @@ npm install --save request
 difference from book. distance returned from mmongod for cafe location is now in m, not km.
 
 ERROR: jquery validation in validation.js not being called.
+
+ERROR: timeout error on heruko
+  2017-09-08T12:26:09.818053+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/" host=boiling-tundra-70842.herokuapp.com request_id=ff27bb88-1b1a-4121-ab61-c8bb11f06665 fwd="67.173.22.49" dyno=web.1 connect=2ms service=30001ms status=503 bytes=0 protocol=https
+  how to revert back to previous commit with a new push?
+  
