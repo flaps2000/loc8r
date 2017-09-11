@@ -237,4 +237,23 @@ ERROR: jquery validation in validation.js not being called.
 ERROR: timeout error on heruko
   2017-09-08T12:26:09.818053+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/" host=boiling-tundra-70842.herokuapp.com request_id=ff27bb88-1b1a-4121-ab61-c8bb11f06665 fwd="67.173.22.49" dyno=web.1 connect=2ms service=30001ms status=503 bytes=0 protocol=https
   how to revert back to previous commit with a new push?
+  heroku rollback (remember new version)
+    fix (apiOptions.server)
+  heroku rollback remembered-version
+
+Added port forwarding to Vagrantfile to allow heroku local testing
+  config.vm.network :forwarded_port, guest: 5000, host: 4568
   
+  couldn't test as would require re-provisioning vm, and could get messy at this stage.
+  
+Ch 8:
+
+QUIRK: would not load myAPp module in example until added 'var myapp = ' to module definition.
+  exactly as book says not to.
+  however, if you then remove var prefix it continues to work!
+  
+QUIRK: had to move angular and loc8r script tags to head in layout to load!!!
+  against best practise? and book?
+
+TODO: set env variable for server address, locally and on heroku
+      commit and push
