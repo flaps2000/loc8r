@@ -5,8 +5,19 @@ html(ng-app='loc8rApp')
     title= title
     link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
     script(src='/angular/angular.js')
-    script(src='/angular/loc8rApp.js')
+    script(src='/lib/angular-route.min.js')
+    //script(src='/angular/loc8r.min.js')
+    script(src='/app.js')
+    script(src='/common/services/loc8rData.service.js' defer)
+    script(src='/common/services/geolocation.service.js' defer)
+    script(src='/common/directives/ratingStars/ratingStars.directive.js' defer)
+    script(src='/common/filters/formatDistance.filter.js' defer)
+    script(src='/home/home.controller.js' defer)
+    script(src='/javascripts/jquery-1.11.1.min.js' defer)
+    script(src='/bootstrap/js/bootstrap.min.js' defer)
+    script(src='/javascripts/validation.js' defer)
   body
    .navbar.navbar-default.navbar-fixed-top
       .container
@@ -22,13 +33,10 @@ html(ng-app='loc8rApp')
               a(href='/about/') About
 
     .container
-      block content
+      div(ng-view)
+        block content
 
       footer
         .row
           .col-xs-12
             small &copy; Simon Holmes 2014
-
-    script(src='/javascripts/jquery-1.11.1.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
-    script(src='/javascripts/validation.js')
