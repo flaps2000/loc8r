@@ -288,6 +288,8 @@ Ch 10:
   
   ERROR:google map insert not loading. no error given!
   
+        works on heroku though!?
+  
 Ch 11:
 
   npm install jsonwebtoken --save
