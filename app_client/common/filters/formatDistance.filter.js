@@ -9,21 +9,21 @@
   };
 
   function formatDistance () {
-  return function (distance) {
-    var numDistance, unit;
-    if (distance && _isNumeric(distance)) {
-      if (distance > 999) {
-        numDistance = parseFloat(distance / 1000).toFixed(1);
-        unit = 'km';
+    return function (distance) {
+      var numDistance, unit;
+      if (distance && _isNumeric(distance)) {
+        if (distance > 999) {
+          numDistance = parseFloat(distance / 1000).toFixed(1);
+          unit = 'km';
+        } else {
+          numDistance = parseInt(distance);
+          unit = 'm';
+        }
+        return numDistance + unit;
       } else {
-        numDistance = parseInt(distance);
-        unit = 'm';
+        return "?";
       }
-      return numDistance + unit;
-    } else {
-      return "?";
-    }
-  };
+    };
   }
 
 

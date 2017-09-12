@@ -257,7 +257,10 @@ QUIRK: had to move angular and loc8r script tags to head in layout to load!!!
 
 TODO: set env variable for server address, locally and on heroku
       commit and push
-
+      
+  NODE_ENV=development
+  PROD_APP_SERVER_URI=https://boiling-tundra-70842.herokuapp.com
+  
 Ch 9:
 
   Script tag moved to head in layout. will not load at end of file
@@ -279,5 +282,27 @@ Ch 9:
   
   NOT WORKING
 
-CH 10:
+Ch 10:
 
+  http://angular-ui.github.io/bootstrap/
+  
+  ERROR:google map insert not loading. no error given!
+  
+Ch 11:
+
+  npm install jsonwebtoken --save
+  npm install dotenv --save
+  npm install passport --save
+  npm install passport-local --save
+  npm install express-jwt --save
+  
+  should post return anything?
+  should register be post, then redirect to get?
+  shouldn't login be a get? not post? what are we posting?
+    
+  QUIRK/ERROR:
+    
+    need to reset isLOggedIn in navigationCOntroller after logout to update navigation view
+    
+    added 'vm.isLoggedIn = authentication.isLoggedIn();' in logout function after logout call
+    

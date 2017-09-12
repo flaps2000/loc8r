@@ -6,7 +6,6 @@ if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGODB_URI;
 }
 
-
 var connection = mongoose.connect(dbURI, {
   useMongoClient: true,
   /* other options */
@@ -52,3 +51,4 @@ process.on('SIGTERM', function() {
 
 // BRING IN YOUR SCHEMAS & MODELS
 require('./locations');
+require('./users');
