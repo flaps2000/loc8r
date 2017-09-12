@@ -67,7 +67,7 @@ var doAddReview = function(req, res, location, author) {
     sendJSONresponse(res, 404, "locationid not found");
   } else {
     location.reviews.push({
-      author: req.body.author,
+      author: author,
       rating: req.body.rating,
       reviewText: req.body.reviewText
     });

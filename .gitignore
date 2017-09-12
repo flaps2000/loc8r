@@ -6,9 +6,8 @@ node_modules
 
 *~
 .DS_Store
-credentials.js
-exampleAng.js
-exampleAng.html
+**/loc8r.min.js
+**/loc8rConcat.js
 
 # Environment variables
 .env
