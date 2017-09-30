@@ -34,7 +34,7 @@ git add .
 
 git commit -m "....."
   
-heroku login - did not create ssh key pair?!? used password only.
+heroku login - (flaps/Rash) did not create ssh key pair?!? used password only.
 
 can reset ssh key on heroku dashboard/settings??
 
@@ -309,3 +309,7 @@ Ch 11:
     
     added 'vm.isLoggedIn = authentication.isLoggedIn();' in logout function after logout call
     
+ERROR:
+
+  review text not appearing in review list on heroku
+  

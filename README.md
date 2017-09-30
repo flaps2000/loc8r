@@ -11,6 +11,11 @@ mongodb features
 Changes from tutorial code
   mostly due to versioning issues
   
+test:
+
+  api endpoints doc
+  json file from postman to use to automate api end point testing
+  
 ## Synopsis
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
